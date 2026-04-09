@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=News+Cycle:wght@400;700&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;   
+    min-height: 100vh;
+    background: url(img/img2.png);
+    background-size: cover; 
+    background-position: center;
+    overflow-x: hidden;
+}
+
+/*---------- SIDEBAR ----------*/
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    padding: 10px;
+    position: relative;
+    transition: all .5s;
+    min-width: 82px;
+    z-index: 999;
+}
+
+#sidebar_content {
+    padding: 12px;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#user_avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 3px solid #d4d4d4;
+    border-radius: 50px;
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child {
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.side-item.active {
+    background-color: #5e6b55
+}
+
+.side-item.active:hover {
+    transform: scale(1.025);
+    transition: 0.15s ease-out;
+    background-color: #525e4a
+}
+
+.side-item:hover:not(.active), #logout:hover {
+    transform: scale(1.025);
+    transition: 0.15s ease-out;
+    background-color: #f2efea;
+}
+
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+}
+
+.side-item.active a {
+    color: #f2efea
+}
+
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+#logout {
+    border-top: 1px solid #f2efea;
+    padding: 12px;
+}
+
+#logout a {
+    text-decoration: none;
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#open_btn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #5e6b55;
+    color: #fff;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 150px;
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+/*---------- PAGINA PRINCIPAL ----------*/
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: calc(100% - 55px);
+    height: 90px;
+    background-color: transparent;
+    border-bottom: 2.5px solid #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    top: 0;
+    left: 55px;
+}
+
+.title h1 {
+    font-size: 75px;
+    color: #fff;
+    text-shadow:
+    0 0 2px #fff;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.icons i[class="fa-brands fa-instagram"] {
+    position:absolute;
+    top: 13px;
+    left: 25px;
+    font-size: 25px; 
+    color: #fff;
+    text-shadow:
+    0 0 1px #fff;
+    font-weight: bold;
+    cursor: pointer;
+    left: 130px;
+}
+
+.icons i[class="fa-regular fa-envelope"] {
+    position:absolute;
+    top: 47px;
+    left: 25px;
+    font-size: 23px; 
+    color: #fff;
+    text-shadow: 0 0 1px #fff;
+    font-weight: bold;
+    cursor: pointer;
+    left: 132.5px;
+}
+
+.icons i[class="fa-brands fa-instagram"]:hover {    
+    transform: scale(1.05);
+    transition: all 0.15s ;
+}
+
+.icons i[class="fa-regular fa-envelope"]:hover {    
+    transform: scale(1.05);
+    transition: all 0.15s ;
+}
+
+.logo {
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 120px;
+}
+
+.logo img:hover {
+    transform: scale(1.05);  
+    transition: all 0.15s;
+}
+
+.desc-title {
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    padding-left: calc(110px + 20px);
+    width: 40%;
+    height: 200px;
+    bottom: 50%;
+    left: 50px;
+}
+
+.desc-title h1   {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 50px;
+    color: #f2efea;
+    font-family: "News Cycle", sans-serif;
+    font-weight: lighter;
+}
+
+.desc-title span {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 50px;
+    color: #f2efea;
+    font-weight: bold;
+    left: calc(170px + 2.5px);
+    bottom: 40px;
+}
+
+.desc h1 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-family: "News Cycle", sans-serif;
+    bottom: 375px;
+    left: calc(130px + 2.5px);
+}
+
+.desc span {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-family: "News Cycle", sans-serif;
+    bottom: 340px;
+    left: calc(155px + 2.5px);
+}
+
+/*---------- SCROLL ----------*/
+
