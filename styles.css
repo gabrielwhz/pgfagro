@@ -160,9 +160,9 @@ body {
 }
 
 .remember-forgot label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .remember-forgot label input{
@@ -247,7 +247,7 @@ body {
 
 /*RESPONSIVO*/
 
-@media (min-width: 320px) and (max-width: 520px){
+@media (max-width: 520px){
     .title h1 {
         font-size: 50px;
     }
@@ -269,5 +269,47 @@ body {
     .logo img {
         height: 90px;
     }
+    }
+
+    @media (max-width: 300px) and (max-width: 470px){
+    .title h1 {
+        font-size: 35px;
+        letter-spacing: 0px;
+    }
+
+    .icons i[class="fa-brands fa-instagram"] {
+        font-size: 15px;
+        text-shadow: none;
+        top: 27px;
+        left: 20px;
+    }
+
+    .icons i[class="fa-regular fa-envelope"] {
+        font-size: 13px;
+        text-shadow: none;
+        top: 48px;
+        left: 21.5px;
+    }
+
+    .logo {
+        top: 15px;
+        right:1px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .container {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .remember-forgot {
+        font-size: 8px;
+        gap: 20px;
+        align-items: center;
+}
+
 
     }
