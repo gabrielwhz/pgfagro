@@ -228,4 +228,31 @@ body {
     .logo img {
         height: 60px;
     }
+
+    .container {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .container p {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .input-box {
+        height: 50px;
+    }
+
+    .input-box input {
+        font-size: 11px;
+    }
+
+    .signup {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .login-icons i {
+        font-size: 27px;
+    }
 }
