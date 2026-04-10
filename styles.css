@@ -282,8 +282,36 @@ body {
     }
 
     .remember-forgot {
-        font-size: 8px;
-        gap: 5px;
+        font-size: 12px;
         align-items: center;
+    }
+
+        .input-box {
+        height: 50px;
+    }
+
+    .input-box input {
+        font-size: 11px;
+    }
+
+    .input-box i[class="bx bxs-user"] {
+        font-size: 16px;
+        top: 32%;
+    }
+
+    .input-box i[class="bx bxs-lock-alt"] {
+        font-size: 16px;
+        top: 35%;
+    }
+
+    .login {
+        height: 50px;
+        font-size: 14px;
+    }
 }
+
+@media (max-width:370px) {
+    .remember-forgot {
+        font-size: 8px;
+    }
 }
