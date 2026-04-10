@@ -244,3 +244,30 @@ body {
 .register-link a:hover {
     text-decoration: underline;
 }
+
+/*RESPONSIVO*/
+
+@media (min-width: 320px) and (max-width: 520px){
+    .title h1 {
+        font-size: 50px;
+    }
+
+    .icons i[class="fa-brands fa-instagram"] {
+        font-size: 22px;
+        text-shadow: none;
+    }
+
+    .icons i[class="fa-regular fa-envelope"] {
+        font-size: 20px;
+        text-shadow: none;
+    }
+
+    .logo {
+        top: 2px;
+    }
+
+    .logo img {
+        height: 90px;
+    }
+
+    }
