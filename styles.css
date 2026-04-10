@@ -271,7 +271,7 @@ body {
     }
     }
 
-    @media (max-width: 300px) and (max-width: 470px){
+    @media (max-width: 470px) {
     .title h1 {
         font-size: 35px;
         letter-spacing: 0px;
