@@ -367,20 +367,20 @@ body {
 
     .desc-title span {
         font-size: 30px;
-        bottom: 25%;
-        left: 120px;
+        top: 70%;
+        left: 175px;
     }
 
     .desc h1 {
-        font-size: 16px;
-        bottom: 55%;
-        left: 148px;
+        font-size: 18px;
+        bottom: 50%;
+        left: 125px;
     }
 
     .desc span {
-        font-size: 16px;
-        bottom: 52%;
-        left: 168px;
+        font-size: 18px;
+        bottom: 47%;
+        left: 150px;
     }
 
 
